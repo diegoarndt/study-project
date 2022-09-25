@@ -4,8 +4,17 @@ try {
   console.error(`Script.js has not been loaded as expected. ${error}`);
 }
 
+const firstName = 'Diego';
+const lastName = 'Arndt';
+console.log(`First name: ${firstName}\nLast name: ${lastName}\nFull name: ${firstName} ${lastName}`)
+
 function sum() {
-  document.getElementById('result').value =
-    +document.getElementById('first-number').value +
-    +document.getElementById('second-number').value;
+  const firstValue = +document.getElementById('first-number').value;
+  const secondValue = +document.getElementById('second-number').value;
+  const result = firstValue + secondValue;
+  document.getElementById('result').value = result;
+
+  console.log(
+    `The first value entered was ${firstValue}\nThe second one was ${secondValue}\nSo the sum of these two values is ${result}`
+  );
 }
