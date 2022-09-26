@@ -19,6 +19,7 @@ a:hover {
 
 .title {
     font-size: larger;
+    font-family: "Finger Paint", cursive;
     background: linear-gradient(to right, #0b66c2, #0b66c2),
         linear-gradient(to right, lightskyblue, aquamarine, slateblue);
     background-size: 100% 3px, 0 3px;
@@ -33,6 +34,11 @@ a:hover {
     -webkit-text-fill-color: white;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 2px;
+}
+
+.subtitle {
+    font-size: x-large;
+    font-family: "Bebas Neue", cursive;
 }
 
 img {
