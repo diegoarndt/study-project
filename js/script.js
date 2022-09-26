@@ -18,3 +18,9 @@ function sum() {
     `The first value entered was ${firstValue}\nThe second one was ${secondValue}\nSo the sum of these two values is ${result}`
   );
 }
+
+function clearText() {
+    document.getElementById('first-number').value = 0;
+    document.getElementById('second-number').value = 0;
+    document.getElementById('result').value = 0;
+}
