@@ -54,14 +54,16 @@
                     <div class="row">
                         <div class="col-12">
                             <ul class="list-group">
-                                <li class="list-group-item" data-toggle="modal" data-target="#exampleModalCenter">
+                                <li class="list-group-item" data-toggle="modal" data-target="#basicCalculator">
                                     Launch basic calculator
+                                </li>
+                                <li class="list-group-item" onclick="createObj()">
+                                    Object creator
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal fade" id="basicCalculator" tabindex="-1" role="dialog">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -111,6 +113,9 @@
             </span>
         </div>
     </footer>
+    <script src="./js/classes/transportation.js"></script>
+    <script src="./js/classes/car.js"></script>
+    <script src="./js/classes/motorcycle.js"></script>
     <script src="./js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
