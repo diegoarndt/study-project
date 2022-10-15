@@ -12,9 +12,15 @@ a {
     text-decoration: none !important;
 }
 
-a:hover {
+.special-link:hover {
     box-shadow: inset 100px 0 0 0 #0b66c2;
-    color: white !important;
+    color: #ffffff !important;
+}
+
+.list-group-item:hover {
+    background-color: #0b66c2;
+    color: #ffffff !important;
+    cursor: pointer;
 }
 
 .title {
@@ -30,15 +36,24 @@ a:hover {
 
 .title:hover {
     background-size: 0 3px, 100% 3px;
-    color: black;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-color: black;
+    color: #000000;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-text-stroke-color: #000000;
     -webkit-text-stroke-width: 2px;
 }
 
 .subtitle {
     font-size: x-large;
-    font-family: "Bebas Neue", cursive;
+    font-family: "Poiret One", cursive;
+    color: #6c757d;
+}
+
+.jumbotron {
+    padding: 2rem 2rem !important;
+}
+
+figure {
+    margin-top: 1rem !important;
 }
 
 img {
@@ -52,6 +67,10 @@ img:hover {
     -webkit-filter: grayscale(0) blur(0);
     filter: grayscale(0) blur(0);
     border: 0.5rem solid #f2f2f2;
+}
+
+.separator {
+    border-left: 1px solid #e9ecef;
 }
 
 .footer {

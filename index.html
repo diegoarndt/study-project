@@ -9,65 +9,97 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Finger+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Finger+Paint&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="text-center">
-        <div class="jumbotron">
-            <h1><span class="title">Diego Arndt's project</span></h1>
-            <h6 class="subtitle">Hi there, let me tell you a little bit about myself</h6>
+        <div class="row jumbotron">
+            <div class="col-12">
+                <h1><span class="title">Diego Arndt's project</span></h1>
+                <h6 class="subtitle">Hi there, let me tell you a little bit about myself</h6>
+            </div>
         </div>
-        <div class="d-flex justify-content-center">
-            <p class="w-75">My name is Diego Arndt and I am 27 years old. I was borned and raised in Blumenau, SC,
-                Brazil, where I was living until the beginning of September 2022. I just moved to Toronto, ON, Canada to
-                study at Humber College and
-                improve my skills in relation to the design and development area, which I am really in love with.</p>
-        </div>
-    </div>
-    <div class="d-flex justify-content-center">
-        <figure class="figure text-center">
-            <img src="./img/myself.jpg" class="figure-img img-fluid rounded w-50" alt="Just a picture of me">
-            <figcaption class="figure-caption">That's me (photo taken in may 2022).</figcaption>
-        </figure>
-    </div>
-
-    <div class="text-center">
-        <p>Here I am gonna list the projects I have been working on at Humber:</p>
-    </div>
-
-    <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-            Launch basic calculator
-        </button>
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Welcome to the basic calculator app</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-8 pr-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>My name is Diego Arndt and I am 27 years old. I was borned and raised in Blumenau,
+                                SC,
+                                Brazil, where I was living until the beginning of September 2022. I just moved to
+                                Toronto, ON,
+                                Canada to study at Humber College and improve my skills in relation to the design and
+                                development
+                                area, which I am really in love with.
+                            </p>
+                        </div>
                     </div>
-                    <div class="modal-body text-center">
-                        <input type="number" class="w-25" id="first-number" value="0" placeholder="1st number">
-                        <span>+</span>
-                        <input type="number" class="w-25" id="second-number" value="0" placeholder="2nd number">
-                        <span>=</span>
-                        <input type="number" class="w-25" id="result" placeholder="Result" disabled>
-
+                    <div class="row">
+                        <div class="col-12">
+                            <figure class="figure text-center">
+                                <img src="./img/myself.jpg" class="figure-img img-fluid rounded w-50"
+                                    alt="Just a picture of me">
+                                <figcaption class="figure-caption">That's me (photo taken in may 2022).</figcaption>
+                            </figure>
+                        </div>
                     </div>
-                    <div class="d-flex pt-1 pb-1 modal-footer">
-                        <div class="mr-auto p-2">
-                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                </div>
+                <div class="col-4 pl-5 separator">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Here I am gonna list the projects I have been working on at Humber:</p>
                         </div>
-                        <div class="p-2">
-                            <button type="button" class="btn btn-secondary" onclick="clearText()">Restart</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="list-group">
+                                <li class="list-group-item" data-toggle="modal" data-target="#basicCalculator">
+                                    Launch basic calculator
+                                </li>
+                                <li class="list-group-item" onclick="createObj()">
+                                    Object creator
+                                </li>
+                            </ul>
                         </div>
-                        <div class="p-2">
-                            <button type="button" class="btn btn-primary" onclick="sum()">Sum</button>
+
+                        <div class="modal fade" id="basicCalculator" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Welcome to the basic
+                                            calculator app</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <input type="number" class="w-25" id="first-number" value="0"
+                                            placeholder="1st number">
+                                        <span>+</span>
+                                        <input type="number" class="w-25" id="second-number" value="0"
+                                            placeholder="2nd number">
+                                        <span>=</span>
+                                        <input type="number" class="w-25" id="result" placeholder="Result" disabled>
+
+                                    </div>
+                                    <div class="d-flex pt-1 pb-1 modal-footer">
+                                        <div class="mr-auto p-2">
+                                            <button type="button" class="btn btn-light"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                        <div class="p-2">
+                                            <button type="button" class="btn btn-secondary"
+                                                onclick="clearText()">Restart</button>
+                                        </div>
+                                        <div class="p-2">
+                                            <button type="button" class="btn btn-primary" onclick="sum()">Sum</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -77,10 +109,13 @@
     <footer class="footer">
         <div class="container">
             <span class="text-muted">Copyright © 2022 Diego Arndt | Feel free to connect with me on
-                <a href="https://www.linkedin.com/in/diegoarndt" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/diegoarndt" class="special-link" target="_blank">LinkedIn</a>
             </span>
         </div>
     </footer>
+    <script src="./js/classes/transportation.js"></script>
+    <script src="./js/classes/car.js"></script>
+    <script src="./js/classes/motorcycle.js"></script>
     <script src="./js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>

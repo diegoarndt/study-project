@@ -6,7 +6,9 @@ try {
 
 const firstName = 'Diego';
 const lastName = 'Arndt';
-console.log(`First name: ${firstName}\nLast name: ${lastName}\nFull name: ${firstName} ${lastName}`)
+console.log(
+  `First name: ${firstName}\nLast name: ${lastName}\nFull name: ${firstName} ${lastName}`
+);
 
 function sum() {
   const firstValue = +document.getElementById('first-number').value;
@@ -20,7 +22,23 @@ function sum() {
 }
 
 function clearText() {
-    document.getElementById('first-number').value = 0;
-    document.getElementById('second-number').value = 0;
-    document.getElementById('result').value = 0;
+  document.getElementById('first-number').value = 0;
+  document.getElementById('second-number').value = 0;
+  document.getElementById('result').value = 0;
+}
+
+function createObj() {
+  console.clear();
+
+  let myCar = new Car(
+    'Volkswagen',
+    'Tiguan R-Line',
+    2020,
+    'Platinum Gray Metallic',
+    true
+  );
+  console.log(myCar.show());
+
+  let myMotorcycle = new Motorcycle('Yahama', 'YZF-R1', 2022, 'Blue', true);
+  console.log(myMotorcycle.show());
 }
