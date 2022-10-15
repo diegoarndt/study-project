@@ -33,7 +33,7 @@ function createObj() {
   let myCar = new Car(
     'Volkswagen',
     'Tiguan R-Line',
-    2021,
+    2020,
     'Platinum Gray Metallic',
     true
   );
