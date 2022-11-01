@@ -1,0 +1,28 @@
+let data = {
+  en: {
+    projectName: "Diego Arndt's project",
+    english: 'English',
+    portuguese: 'Portuguese',
+    basicCalc: 'Basic calculator',
+    objCreator: 'Object creator',
+    myDesc: 'My name is Diego Arndt and I am 27 years old. I was borned and raised in Blumenau, SC, Brazil, where I was living until the beginning of September 2022. I just moved to Toronto, ON, Canada to study at Humber College and improve my skills in relation to the design and development area, which I am really in love with.',
+    thatMe: "That's me (photo taken in may 2022)",
+    name: 'Name',
+    username: 'Username',
+    telephone: 'Telephone',
+    footer: 'Feel free to connect with me on',
+  },
+  pt: {
+    projectName: 'Projeto do Diego Arndt',
+    english: 'Inglês',
+    portuguese: 'Português',
+    basicCalc: 'Calculadora básica',
+    objCreator: 'Criador de objeto',
+    myDesc: 'Meu nome é Diego Arndt e eu tenho 27 anos de idade. Eu nasci e cresci em Blumenau, SC, Brasil, onde eu estava vivendo até o início de Setembro de 2022. Eu me mudei a pouco tempo para Toronto, ON, Canadá para estudar no Humber College e para melhorar as minhas habilidades em relação a design e desenvolvimento, que é uma área que estou apaixanado.',
+    thatMe: 'Esse sou eu (foto tirada em maio de 2022)',
+    name: 'Nome',
+    username: 'Usuário',
+    telephone: 'Telefone',
+    footer: 'Fique a vontade pra se conectar comigo no',
+  },
+};
