@@ -4,6 +4,41 @@ try {
   console.error(`Script.js has not been loaded as expected. ${error}`);
 }
 
+$(() => {
+  $('.language').click((element) => {
+    const lang = element.target.id;
+
+    $('.translate').each((_, item) => {
+      $(item).text(data[lang][$(item).attr('key')]);
+    });
+  });
+
+  fetch('https://jsonplaceholder.typicode.com/users')
+    .then((response) => response.json())
+    .then((json) => {
+      const filteredData = json.map((data) => ({
+        id: data.id,
+        name: data.name,
+        username: data.username,
+        telephone: data.phone,
+        email: data.email,
+        website: data.website
+      }));
+
+      $('#userTable').DataTable({
+        data: filteredData,
+        columns: [
+          { data: 'id'},
+          { data: 'name'},
+          { data: 'username'},
+          { data: 'telephone'},
+          { data: 'email'},
+          { data: 'website'}
+        ]
+      });
+    });
+});
+
 const firstName = 'Diego';
 const lastName = 'Arndt';
 console.log(
