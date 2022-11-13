@@ -5,6 +5,13 @@ try {
 }
 
 $(() => {
+  $('.masthead-brand').dblclick(function () {
+    party.confetti(this, {
+      count: party.variation.range(100, 500),
+      size: party.variation.range(0.5, 1.0),
+    });
+  });
+
   $('.language').click((element) => {
     const lang = element.target.id;
 
@@ -22,19 +29,19 @@ $(() => {
         username: data.username,
         telephone: data.phone,
         email: data.email,
-        website: data.website
+        website: data.website,
       }));
 
       $('#userTable').DataTable({
         data: filteredData,
         columns: [
-          { data: 'id'},
-          { data: 'name'},
-          { data: 'username'},
-          { data: 'telephone'},
-          { data: 'email'},
-          { data: 'website'}
-        ]
+          { data: 'id' },
+          { data: 'name' },
+          { data: 'username' },
+          { data: 'telephone' },
+          { data: 'email' },
+          { data: 'website' },
+        ],
       });
     });
 });

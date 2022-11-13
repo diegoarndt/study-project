@@ -48,6 +48,12 @@ a {
     -webkit-text-stroke-width: 2px;
 }
 
+.prevent-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
 .menu-item {
     font-size: larger;
     font-family: "Poiret One", cursive;
