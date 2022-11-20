@@ -21,61 +21,123 @@
 
         <header class="masthead">
             <div class="inner row flex-nowrap">
-                <div class="col-2"></div>
-                <div class="col-8">
-                    <h3 class="masthead-brand prevent-select"><span class="title translate"
-                            key="projectName">Diego Arndt's
-                            project</span></h3>
+                <div class="col-12">
+                    <h3 class="masthead-brand prevent-select"><span class="title translate" key="projectName">Diego
+                            Arndt's project</span></h3>
                     <nav class="nav nav-masthead justify-content-center">
-                        <a class="nav-link menu-item active" href="#">Home</a>
+                        <a class="nav-link menu-item active" href="index.html">Home</a>
                         <a class="nav-link menu-item translate" href="#" data-toggle="modal"
-                            data-target="#basicCalculator" key="basicCalc">Basic
-                            calculator</a>
+                            data-target="#basicCalculator" key="basicCalc">
+                            Basic calculator</a>
+                        <a class="nav-link menu-item translate" href="#" data-toggle="modal"
+                            data-target="#userTableModal" key="userDataTable">
+                            User data table</a>
                         <a class="nav-link menu-item translate" href="#" onclick="createObj()" key="objCreator">Object
                             creator</a>
                     </nav>
-                </div>
-                <div class="col-2 align-items-center">
-                    <span>&#127464;&#127462;</span><button type="button" class="btn btn-link mb-2 language translate"
-                        id="en" key="english">English</button>
-                    <br>
-                    <span>&#127463;&#127479;</span><button type="button" class="btn btn-link mb-2 language translate"
-                        id="pt" key="portuguese">Portuguese</button>
+                    <div class="align-items-center mb-4">
+                        <span>&#127464;&#127462;</span><button type="button"
+                            class="btn btn-link mb-2 language translate" id="en" key="english">English</button>
+                        <span>&#127463;&#127479;</span><button type="button"
+                            class="btn btn-link mb-2 language translate" id="pt" key="portuguese">Portuguese</button>
+                    </div>
                 </div>
             </div>
         </header>
 
-        <main role="main" class="inner cover">
-            <div class="container">
-                <p class="translate" key="myDesc">My name is Diego Arndt and I am 27 years old. I was borned and raised
-                    in Blumenau,
-                    SC,
-                    Brazil, where I was living until the beginning of September 2022. I just moved to
-                    Toronto, ON,
-                    Canada to study at Humber College and improve my skills in relation to the design
-                    and
-                    development
-                    area, which I am really in love with.
-                </p>
-                <figure class="figure text-center">
-                    <img src="./img/myself.jpg" class="figure-img img-fluid rounded w-50" alt="Just a picture of me">
-                    <figcaption class="figure-caption translate" key="thatMe">That's me (photo taken in may 2022).
-                    </figcaption>
-                </figure>
+        <div aria-live="polite" aria-atomic="true">
+            <div class="toast" style="position: absolute; top: 10%; right: 1%;">
+                <div class="toast-header">
+                    <strong class="mr-auto">Object creator</strong>
+                    <small>now</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    A new object was created successfully!
+                    <br>
+                    Check the console.
+                </div>
+            </div>
+        </div>
 
-                <div class="mt-4">
-                    <table id="userTable" class="display" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>User ID</th>
-                                <th class="translate" key="name">Name</th>
-                                <th class="translate" key="username">Username</th>
-                                <th>E-mail</th>
-                                <th class="translate" key="telephone">Telephone</th>
-                                <th>Website</th>
-                            </tr>
-                        </thead>
-                    </table>
+        <main role="main" class="inner cover">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h3>About me</h3>
+                    <p class="lead translate" key="myDesc">My name is Diego Arndt and I am 27 years old. I was borned
+                        and
+                        raised
+                        in Blumenau,
+                        SC,
+                        Brazil, where I was living until the beginning of September 2022. I just moved to
+                        Toronto, ON,
+                        Canada to study at Humber College and improve my skills in relation to the design
+                        and
+                        development
+                        area, which I am really in love with.</p>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div id="carouselExampleCaptions" class="carousel slide bg-dark" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="10000">
+                            <img src="./img/under-construction.jpg" class="rounded w-50"
+                                alt="Under construction website">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="translate" key="workingOn">Still working on it</h5>
+                                <p class="translate" key="newFeature">New features are coming out every single week!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-interval="5000">
+                            <img src="./img/myself.jpg" class="rounded w-50" alt="Just a picture of me">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Diego Arndt</h5>
+                                <p class="translate" key="thatMe">That's me (photo taken in may 2022)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="modal fade" id="userTableModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">User data table</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <table id="userTable" class="display table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>User ID</th>
+                                        <th class="translate" key="name">Name</th>
+                                        <th>E-mail</th>
+                                        <th class="translate" key="telephone">Telephone</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -83,7 +145,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Welcome to the basic
+                            <h5 class="modal-title">Welcome to the basic
                                 calculator app</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -113,7 +175,8 @@
             </div>
         </main>
 
-        <footer class="mastfoot mt-auto">
+        <footer class="mastfoot mt-auto pt-4">
+            <hr>
             <div class="inner">
                 <span class="text-muted">Copyright © 2022 Diego Arndt | <span class="translate" key="footer">Feel free
                         to connect with me on</span>
@@ -125,7 +188,7 @@
 
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
