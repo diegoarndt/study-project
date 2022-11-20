@@ -10,6 +10,9 @@ let data = {
     name: 'Name',
     username: 'Username',
     telephone: 'Telephone',
+    userDataTable: 'User data table',
+    workingOn: 'Still working on it',
+    newFeature: 'New features are coming out every single week!',
     footer: 'Feel free to connect with me on',
   },
   pt: {
@@ -21,8 +24,10 @@ let data = {
     myDesc: 'Meu nome é Diego Arndt e eu tenho 27 anos de idade. Eu nasci e cresci em Blumenau, SC, Brasil, onde eu estava vivendo até o início de Setembro de 2022. Eu me mudei a pouco tempo para Toronto, ON, Canadá para estudar no Humber College e para melhorar as minhas habilidades em relação a design e desenvolvimento, que é uma área que estou apaixanado.',
     thatMe: 'Esse sou eu (foto tirada em maio de 2022)',
     name: 'Nome',
-    username: 'Usuário',
     telephone: 'Telefone',
+    userDataTable: 'Tabela de usuários',
+    workingOn: 'Ainda em desenvolvimento',
+    newFeature: 'Novos recursos estão saindo toda semana!',
     footer: 'Fique a vontade pra se conectar comigo no',
   },
 };
