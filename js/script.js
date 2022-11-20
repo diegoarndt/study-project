@@ -26,21 +26,19 @@ $(() => {
       const filteredData = json.map((data) => ({
         id: data.id,
         name: data.name,
-        username: data.username,
-        telephone: data.phone,
         email: data.email,
-        website: data.website,
+        telephone: data.phone,
       }));
 
       $('#userTable').DataTable({
         data: filteredData,
+        pageLength: 5,
+        lengthMenu: [1, 5, 10],
         columns: [
           { data: 'id' },
           { data: 'name' },
-          { data: 'username' },
-          { data: 'telephone' },
           { data: 'email' },
-          { data: 'website' },
+          { data: 'telephone' },
         ],
       });
     });
@@ -71,6 +69,9 @@ function clearText() {
 
 function createObj() {
   console.clear();
+
+  $('.toast').toast({animation: true, autohide: true, delay: 5000});
+  $('.toast').toast('show');
 
   let myCar = new Car(
     'Volkswagen',
