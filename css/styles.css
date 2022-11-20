@@ -1,13 +1,12 @@
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  display: -ms-flexbox;
-  display: flex;
-  color: #fff;
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
 }
 
 a {
@@ -30,7 +29,7 @@ a {
 }
 
 .title {
-    font-size: larger;
+    font-size: 3.5vh;
     font-family: "Finger Paint", cursive;
     background: linear-gradient(to right, #0b66c2, #0b66c2),
         linear-gradient(to right, lightskyblue, aquamarine, slateblue);
@@ -52,10 +51,10 @@ a {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
 
 .menu-item {
-    font-size: larger;
+    font-size: 1.3vh;
     font-family: "Poiret One", cursive;
     color: #6c757d;
 }
@@ -79,7 +78,11 @@ img {
 img:hover {
     -webkit-filter: grayscale(0) blur(0);
     filter: grayscale(0) blur(0);
-    border: 0.5rem solid #f2f2f2;
+}
+
+.modal-dialog {
+    max-width: 75% !important;
+    margin: 0.5rem;
 }
 
 .separator {
