@@ -70,7 +70,7 @@ function clearText() {
 function createObj() {
   console.clear();
 
-  $('.toast').toast({animation: true, autohide: true, delay: 5000});
+  $('.toast').toast({ animation: true, autohide: true, delay: 5000 });
   $('.toast').toast('show');
 
   let myCar = new Car(
@@ -84,4 +84,43 @@ function createObj() {
 
   let myMotorcycle = new Motorcycle('Yahama', 'YZF-R1', 2022, 'Blue', true);
   console.log(myMotorcycle.show());
+}
+
+function runRandomLoop() {
+  const qtyNumbers = +document.getElementById('qty-numbers-random').value;
+  let numbersString = '';
+
+  if (qtyNumbers > 99) {
+    document.getElementById(
+      'loop-result-random'
+    ).innerHTML = 'This number is too big, try a smaller one (Max 99).';
+  } else {
+    while (numbersString.split(' ').length <= qtyNumbers) {
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
+      if (!numbersString.includes(randomNumber)) {
+        numbersString += `${randomNumber} `;
+      }
+    }
+    document.getElementById(
+      'loop-result-random'
+    ).innerHTML = `Numbers: ${numbersString}`;
+  }
+}
+
+function runLoop() {
+  const qtyNumbers = +document.getElementById('qty-numbers').value;
+  let numbersString = '';
+
+  if (qtyNumbers > 999) {
+    document.getElementById(
+      'loop-result'
+    ).innerHTML = `This number is too big, try a smaller one (Max 999).`;
+  } else {
+    for (let i = 1; i <= qtyNumbers; i++) {
+      numbersString += `${i} `;
+    }
+    document.getElementById(
+      'loop-result'
+    ).innerHTML = `Numbers: ${numbersString}`;
+  }
 }
