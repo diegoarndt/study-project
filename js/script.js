@@ -42,6 +42,35 @@ $(() => {
         ],
       });
     });
+
+    const brands = new Set(["Starbucks","Tim Hortons","Mercedes"]);
+    console.log(brands);
+    brands.add("BMW");
+    brands.delete("Mercedes");
+    console.log(brands);
+    console.log('Is BMW in the set? ' + brands.has("BMW"));
+    console.log('Is VW in the set? ' + brands.has("VW"));
+    brands.clear();
+    console.log(brands);
+    console.log("The brands set is empty, nothing to show here.");
+
+    const carsWarehouse = new Map([
+      ["golf", 250],
+      ["corolla", 170],
+      ["civic", 280],
+      ["forte", 80]
+    ]);
+
+    console.log(carsWarehouse);
+    carsWarehouse.set("tiguan", 50);
+    console.log("Qty of civics: " + carsWarehouse.get('civic'));
+    carsWarehouse.delete("golf");
+    console.log(carsWarehouse);
+    carsWarehouse.set("tiguan", 80);
+    console.log("30 tiguans were added to the warehouse. New total: " + carsWarehouse.get("tiguan"));
+    carsWarehouse.clear();
+    console.log(carsWarehouse);
+    console.log("The car warehouse has been closed, all cars were sold.");
 });
 
 const firstName = 'Diego';
