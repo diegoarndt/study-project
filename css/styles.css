@@ -20,6 +20,7 @@ a {
 .special-link:hover {
     box-shadow: inset 100px 0 0 0 #0b66c2;
     color: #ffffff !important;
+    margin-inline-start: 1px;
 }
 
 .list-group-item:hover {
@@ -59,6 +60,10 @@ a {
     color: #6c757d;
 }
 
+.menu-item:hover {
+    background-color: azure;
+}
+
 .nav-masthead {
     border-bottom: 1px solid #e9ecef;
     margin-bottom: 2rem !important;
@@ -96,4 +101,14 @@ img:hover {
     width: 100%;
     padding: 1rem;
     text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .language {
+        display: none !important;
+    }
+    .country-flag {
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
 }
